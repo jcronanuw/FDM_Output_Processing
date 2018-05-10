@@ -5,19 +5,19 @@
 # 3) Header information must be properly entered and formatted
 
 # Code below has been modified from:
-# https://community.esri.com/thread/46801 (see code repost by tiggs03 Mar 6, 2012.
+# https://community.esri.com/thread/46801 (see code repost by tiggs03 -- Mar 6, 2012).
 
 # Import system modules
-import arcgisscripting, os
+import arcgisscripting, os, arcpy
 
 # Create the Geoprocessor object
 gp = arcgisscripting.create()
 
 # Set local variables
 InAsciiFile = None
-inDir = r"C:\usfs_cronan_gis\SEF\FDM_outputs_vFP\run_102"
-OutRaster = "C:/usfs_cronan_gis/SEF/FDM_outputs_vFP/run_102_raster"
-gp.outputCoordinateSystem = r"Coordinate Systems\Geographic Coordinate Systems\World\WGS 1984.prj"
+inDir = r"C:\usfs_cronan_gis\SEF\FDM_outputs\\run_a4f9_x"
+OutRaster = "C:\usfs_cronan_gis\SEF\FDM_outputs\\run_a4f9_x_raster"
+gp.outputCoordinateSystem = r"C:\usfs_cronan_gis\SEF\FDM_outputs\run_d45c.prj"#lost code I used to create this .prj file, but shouldn't need it now that I have one.
 
 for InAsciiFile in os.listdir(inDir):
     if InAsciiFile.rsplit(".")[-1] == "asc":
