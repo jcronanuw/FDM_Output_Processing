@@ -15,9 +15,9 @@ gp = arcgisscripting.create()
 
 # Set local variables
 InAsciiFile = None
-inDir = r"C:\usfs_cronan_gis\SEF\FDM_outputs\\run_a4f9_x"
-OutRaster = "C:\usfs_cronan_gis\SEF\FDM_outputs\\run_a4f9_x_raster"
-gp.outputCoordinateSystem = r"C:\usfs_cronan_gis\SEF\FDM_outputs\run_d45c.prj"#lost code I used to create this .prj file, but shouldn't need it now that I have one.
+inDir = r"C:\usfs_cronan_gis\SEF\FDM_IAWF_runs\run_0888\flame_length"
+OutRaster = "C:\usfs_cronan_gis\SEF\FDM_IAWF_runs\\run_0888_out_flamelength"
+gp.outputCoordinateSystem = r"C:\usfs_cronan_gis\SEF\FDM_outputs\NAD_1983_UTM_Zone_16N_coordinate_system.prj"#lost code I used to create this .prj file, but shouldn't need it now that I have one.
 
 for InAsciiFile in os.listdir(inDir):
     if InAsciiFile.rsplit(".")[-1] == "asc":
