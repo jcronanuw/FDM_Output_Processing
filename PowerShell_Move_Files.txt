@@ -1,0 +1,2 @@
+#This code will move all .asc files from sub-directories on Box to a single directory on the One USDA drive.
+PS C:\> Get-ChildItem -Path C:\Users\jcronan\Box\01_james_cronan_Workspace\Research\UW_PHD\Dissertation\4_Chapter_4\2023_FDM_Simulation_Outputs\usfs_sef_outputs_FDM\*.asc -Recurse | Copy-Item -Destination "C:\Users\jcronan\OneDrive - USDA\Documents\cronan_gis\fdm_post_processing_2023\1_fdm_outputs_short_filenames" -Recurse

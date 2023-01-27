@@ -12,6 +12,9 @@
 #              consistent-symbology-between-multiple-stretched-rasters-in-
 #              arcmap
 #-------------------------------------------------------------------------------
+#Import arcpy package
+import arcpy
+
 # read in mxd file
 mxd = arcpy.mapping.MapDocument(r"C:\usfs_cronan_gis\SEF\20171101_FireProgression.mxd")
 
