@@ -23,12 +23,12 @@ import arcpy
 from arcpy import env
 
 #Set the current workspace
-env.workspace = "C:\usfs_cronan_gis\sef"
-mxd = arcpy.mapping.MapDocument(r"C:\usfs_cronan_gis\sef\20230124_FineFuels_Abs.mxd")
+env.workspace = "D:\FDM_2023_Simulation_Data"
+mxd = arcpy.mapping.MapDocument(r"D:\FDM_2023_Simulation_Data\Step_04_Symbology_Menu_Map\20230129_Symbology_Map_050_001.mxd")
 df = arcpy.mapping.ListDataFrames(mxd, "Layers")[0]
-rasters = arcpy.mapping.ListLayers(mxd, "t050*", df)
+rasters = arcpy.mapping.ListLayers(mxd, "f_*", df)
 
-symbologyLayer = r"C:\usfs_cronan_gis\sef\x050_01_50.lyr"
+symbologyLayer = r"D:\FDM_2023_Simulation_Data\Step_04_Symbology_Menu_Map\Step_B_shapefile\symbology_map.lyr"
 
 for ThisLayer in rasters:
 	print "Working on " + ThisLayer.name

@@ -15,8 +15,10 @@ gp = arcgisscripting.create()
 
 # Set local variables
 InAsciiFile = None
-inDir = r"D:\FDM_2023_Simulation_Data\Step_01_FDM_Outputs\fuelbed_maps_step_1b_short_file_names"
-OutRaster = "D:\FDM_2023_Simulation_Data\Step_03_Shapefiles\\fuelbed_maps"
+#inDir = r"D:\FDM_2023_Simulation_Data\Step_01_FDM_Outputs\fuelbed_maps_step_1b_short_file_names"
+inDir = r"D:\FDM_2023_Simulation_Data\Step_04_Symbology_Menu_Map"
+#OutRaster = "D:\FDM_2023_Simulation_Data\Step_03_Shapefiles\\fuelbed_maps"
+OutRaster = "D:\FDM_2023_Simulation_Data\Step_04_Symbology_Menu_Map"
 gp.outputCoordinateSystem = r"C:\Users\jcronan\OneDrive - USDA\Documents\GitHub\FDM_Output_Processing\inputs\NAD_1983_UTM_Zone_16N_coordinate_system.prj"#lost code I used to create this .prj file, but shouldn't need it now that I have one.
 
 for InAsciiFile in os.listdir(inDir):
